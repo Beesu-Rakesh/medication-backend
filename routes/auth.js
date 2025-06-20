@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('../db');
 const router = express.Router();
-const SECRET = 'your_secret_key';
+const SECRET = process.env.JWT_SECRET;
 
 // Signup
 router.post('/signup', async (req, res) => {
